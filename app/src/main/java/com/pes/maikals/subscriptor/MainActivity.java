@@ -15,6 +15,8 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
+import org.apache.http.client.HttpClient;
+
 public class MainActivity extends Activity {
 
     @Override
@@ -45,7 +47,7 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
- 
+
     public static Bitmap toBitmap(BitMatrix matrix){
         int height = matrix.getHeight();
         int width = matrix.getWidth();
