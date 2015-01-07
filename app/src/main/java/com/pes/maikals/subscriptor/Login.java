@@ -30,7 +30,7 @@ import ServiceLayer.ApiService;
 
 
 public class Login extends Activity {
-
+    private boolean logged;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +64,12 @@ public class Login extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (logged) finish();
+    }
+
     public void loginAttempt(View view) {
         Log.d("com.pes.maikals.subscriptor", "loginAttempt() cridat");
         EditText emailEdit = (EditText) findViewById(R.id.email);
@@ -73,9 +79,10 @@ public class Login extends Activity {
         int code = ApiService.login(email,password);
         if (code == 401) Toast.makeText(getApplicationContext(), "Usuari Incorrecte", Toast.LENGTH_LONG).show();
         else if (code == 200) {
+            logged = true;
             Intent intent = new Intent(this, Vals.class);
-            intent.putExtra("email", email);
-            startActivity(intent);
+                intent.putExtra("email", email);
+                startActivity(intent);
         }
     }
 }
