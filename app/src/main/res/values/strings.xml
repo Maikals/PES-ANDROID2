@@ -2,12 +2,12 @@
 <resources>
 
     <string name="app_name">Subscriptor</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="entra_codi">Entra Codi</string>
     <string name="generar">Generar</string>
     <string name="title_activity_login">Login</string>
     <string name="email">email</string>
     <string name="Pass">Password</string>
+    <string name="title_activity_vals">Vals disponibles</string>
 
 </resources>

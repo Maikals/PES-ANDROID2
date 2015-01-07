@@ -25,6 +25,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
+import Domini.Val;
 import ServiceLayer.ApiService;
 
 
@@ -72,7 +73,9 @@ public class Login extends Activity {
         int code = ApiService.login(email,password);
         if (code == 401) Toast.makeText(getApplicationContext(), "Usuari Incorrecte", Toast.LENGTH_LONG).show();
         else if (code == 200) {
-            //TODO cridar pantalla de vals
+            Intent intent = new Intent(this, Vals.class);
+            intent.putExtra("email", email);
+            startActivity(intent);
         }
     }
 }
