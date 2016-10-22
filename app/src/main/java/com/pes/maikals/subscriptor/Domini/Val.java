@@ -1,4 +1,4 @@
-package Domini;
+package com.pes.maikals.subscriptor.Domini;
 
 /**
  * Created by maikals on 06/01/15.

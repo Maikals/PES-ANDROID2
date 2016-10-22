@@ -1,10 +1,9 @@
-package com.pes.maikals.subscriptor;
+package com.pes.maikals.subscriptor.Views;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,10 +11,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.ArrayList;
+import com.pes.maikals.subscriptor.Domini.Val;
+import com.pes.maikals.subscriptor.R;
+import com.pes.maikals.subscriptor.ServiceLayer.ApiService;
 
-import Domini.Val;
-import ServiceLayer.ApiService;
+import java.util.ArrayList;
 
 import static android.R.layout.simple_list_item_1;
 

@@ -1,4 +1,4 @@
-package com.pes.maikals.subscriptor;
+package com.pes.maikals.subscriptor.Views;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,8 +7,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,8 +14,7 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
-
-import org.apache.http.client.HttpClient;
+import com.pes.maikals.subscriptor.R;
 
 public class MainActivity extends Activity {
 

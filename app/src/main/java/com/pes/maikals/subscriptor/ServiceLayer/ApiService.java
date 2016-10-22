@@ -1,30 +1,8 @@
-package ServiceLayer;
+package com.pes.maikals.subscriptor.ServiceLayer;
 
-import android.util.Log;
+import com.pes.maikals.subscriptor.Domini.Val;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONTokener;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.List;
-
-import Domini.Val;
 
 /**
  * Created by maikals on 04/01/15.
@@ -33,12 +11,12 @@ import Domini.Val;
 public class ApiService {
 
     static public ArrayList<Val> getVals(String email) {
-        Log.d("com.pes.maikals.subscriptor", "mail i pass aconseguits cridat " + email);
+       /* Log.d("ApiService", "mail i pass aconseguits cridat " + email);
         HttpClient httpclient = new DefaultHttpClient();
         HttpGet httpget = new HttpGet("http://pes.ivy-corp.com/api/vals?email="+email);
-        Log.d("com.pes.maikals.subscriptor", "intentem connexió");
+        Log.d("ApiService", "intentem connexió");*/
         ArrayList<Val> vals = new ArrayList<Val>();
-        try {
+        /*try {
             // Execute HTTP Post Request
 
             HttpResponse response = httpclient.execute(httpget);
@@ -64,18 +42,18 @@ public class ApiService {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
-        }
+        }*/
         return vals;
     }
 
     static public int login(String email, String password) {
-        Log.d("com.pes.maikals.subscriptor", "mail i pass aconseguits cridat " + email + " " + password);
-        HttpClient httpclient = new DefaultHttpClient();
-        HttpPost httppost = new HttpPost("http://pes.ivy-corp.com/api/checkauth");
-        Log.d("com.pes.maikals.subscriptor", "intentem connexió");
+       // Log.d("com.pes.maikals.subscriptor", "mail i pass aconseguits cridat " + email + " " + password);
+        //HttpClient httpclient = new DefaultHttpClient();
+        //HttpPost httppost = new HttpPost("http://pes.ivy-corp.com/api/checkauth");
+        //Log.d("com.pes.maikals.subscriptor", "intentem connexió");
 
         int stat = 0;
-        try {
+        /*try {
             // Add your data
             List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
             nameValuePairs.add(new BasicNameValuePair("email", email));
@@ -100,7 +78,7 @@ public class ApiService {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
-        }
+        }*/
         return stat;
     }
 }
